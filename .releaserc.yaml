@@ -1,0 +1,22 @@
+branches:
+  - main
+plugins:
+  - '@semantic-release/commit-analyzer'
+  - '@semantic-release/release-notes-generator'
+  - '@semantic-release/github'
+  - '@semantic-release/changelog'
+  - 'semantic-release-license'
+  - - '@semantic-release/git'
+    - message: |-
+        chore(release): ${nextRelease.version} [skip ci]
+        
+        ${nextRelease.notes}
+      assets:
+        - CHANGELOG.md
+        - LICENSE
+  - - '@semantic-release-plus/docker'
+    - name: ammmze/akri-ser2net-broker
+      registryUrl: docker.io
+      publishLatestTag: true
+      publishMajorTag: true
+      publishMinorTag: true

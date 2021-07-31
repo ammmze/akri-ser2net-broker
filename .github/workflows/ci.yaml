@@ -1,0 +1,41 @@
+name: Build and Release
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Commit Message Lint
+        uses: wagoid/commitlint-github-action@v2
+      - name: ShellCheck
+        uses: ludeeus/action-shellcheck@master
+      - name: Docker lint
+        uses: hadolint/hadolint-action@v1.5.0
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Build images
+        run: docker buildx build . --tag ammmze/akri-ser2net-broker --platform linux/amd64,linux/arm/v7,linux/arm64
+      - name: Semantic Release
+        if: ${{ github.event_name == 'push' && github.event.ref == 'refs/heads/main' }}
+        uses: cycjimmy/semantic-release-action@v2
+        with:
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release-plus/docker
+            semantic-release-license
+            @semantic-release/git
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DOCKER_USERNAME: ${{ secrets.DOCKER_IO_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_IO_PASSWORD }}
+
