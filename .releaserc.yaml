@@ -12,9 +12,12 @@ plugins:
         ${nextRelease.notes}
       assets:
         - CHANGELOG.md
-  - - '@semantic-release-plus/docker'
-    - name: ammmze/akri-ser2net-broker
-      registryUrl: docker.io
-      publishLatestTag: true
-      publishMajorTag: true
-      publishMinorTag: true
+  - - '@semantic-release/exec'
+    - publishCmd: |-
+        sh -c 'docker buildx build . --push --tag ammmze/akri-ser2net-broker --platform linux/amd64,linux/arm/v7,linux/arm64'
+  # - - '@semantic-release-plus/docker'
+  #   - name: ammmze/akri-ser2net-broker
+  #     registryUrl: docker.io
+  #     publishLatestTag: true
+  #     publishMajorTag: true
+  #     publishMinorTag: true
