@@ -32,7 +32,6 @@ jobs:
           extra_plugins: |
             @semantic-release/changelog
             @semantic-release-plus/docker
-            semantic-release-license
             @semantic-release/git
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
