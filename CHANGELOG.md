@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/ammmze/akri-ser2net-broker/compare/v1.0.2...v1.0.3) (2021-07-31)
+
+
+### Bug Fixes
+
+* only do docker login when pushing to main ([c0b3d11](https://github.com/ammmze/akri-ser2net-broker/commit/c0b3d1194420f8f63ea0c65c92f92d2523b852ed))
+
 ## [1.0.2](https://github.com/ammmze/akri-ser2net-broker/compare/v1.0.1...v1.0.2) (2021-07-31)
 
 
