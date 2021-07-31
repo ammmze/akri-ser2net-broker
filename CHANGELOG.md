@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/ammmze/akri-ser2net-broker/compare/v1.0.1...v1.0.2) (2021-07-31)
+
+
+### Bug Fixes
+
+* add version tagged docker image ([6042685](https://github.com/ammmze/akri-ser2net-broker/commit/60426855aa8966ad228a88b9e1417d48b17ae9a2))
+
 ## [1.0.1](https://github.com/ammmze/akri-ser2net-broker/compare/v1.0.0...v1.0.1) (2021-07-31)
 
 
