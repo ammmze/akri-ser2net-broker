@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/ammmze/akri-ser2net-broker/compare/v1.0.3...v1.0.4) (2021-07-31)
+
+
+### Bug Fixes
+
+* make entrypoint executable ([9f2f4d5](https://github.com/ammmze/akri-ser2net-broker/commit/9f2f4d52a8faddec9cc303ad7cd945a548e4fd88))
+
 ## [1.0.3](https://github.com/ammmze/akri-ser2net-broker/compare/v1.0.2...v1.0.3) (2021-07-31)
 
 
