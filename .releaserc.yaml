@@ -14,7 +14,7 @@ plugins:
         - CHANGELOG.md
   - - '@semantic-release/exec'
     - publishCmd: |-
-        sh -c 'docker buildx build . --push --tag ammmze/akri-ser2net-broker --platform linux/amd64,linux/arm/v7,linux/arm64'
+        docker buildx build . --push --tag ammmze/akri-ser2net-broker --tag ammmze/akri-ser2net-broker:${nextRelease.version} --platform linux/amd64,linux/arm/v7,linux/arm64
   # - - '@semantic-release-plus/docker'
   #   - name: ammmze/akri-ser2net-broker
   #     registryUrl: docker.io
