@@ -1,4 +1,4 @@
-FROM alpine:3.14.2
+FROM alpine:3.17.3
 
 RUN apk add --no-cache ser2net=3.5.1-r0
 COPY entrypoint.sh /entrypoint.sh
