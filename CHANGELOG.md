@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/ammmze/akri-ser2net-broker/compare/v1.0.4...v1.1.0) (2023-04-23)
+
+
+### Bug Fixes
+
+* correct env var name in log output ([1931ec4](https://github.com/ammmze/akri-ser2net-broker/commit/1931ec42c808bec642a4e9ffde62000a800a1f5f))
+* update ser2net version to 3.5.1-r1 ([ef11211](https://github.com/ammmze/akri-ser2net-broker/commit/ef11211f19d30eee78787cc8f99da2a63ee2c2e1))
+
+
+### Features
+
+* support for new env format in akri 0.10.4 ([ba6f5eb](https://github.com/ammmze/akri-ser2net-broker/commit/ba6f5eb50adfc95ff8cc224ed330e69deb8863c1))
+
 ## [1.0.4](https://github.com/ammmze/akri-ser2net-broker/compare/v1.0.3...v1.0.4) (2021-07-31)
 
 
