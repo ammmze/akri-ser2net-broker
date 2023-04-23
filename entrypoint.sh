@@ -10,6 +10,6 @@ fi
 
 UDEV_DEVNODE="$(printenv "${env_name}")"
 
-echo "Using device: ${env_name}=${UDEV_DEV_NODE}"
+echo "Using device: ${env_name}=${UDEV_DEVNODE}"
 
 exec ser2net -d -C "${PORT}:${STATE}:${TIMEOUT}:${UDEV_DEVNODE}:${DEVICE_OPTIONS}"
