@@ -22,7 +22,7 @@ jobs:
         uses: hadolint/hadolint-action@v3.1.0
       - name: Set up Docker Buildx
         id: buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v3
       - name: Build images
         run: docker buildx build . --tag ammmze/akri-ser2net-broker --platform linux/amd64,linux/arm/v7,linux/arm64
       - name: Login to Docker Hub
