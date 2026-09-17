@@ -1,6 +1,6 @@
 FROM alpine:3.17.3
 
-RUN apk add --no-cache ser2net=3.5.1-r1
+RUN apk add --no-cache ser2net=4.6.4-r0
 COPY entrypoint.sh /entrypoint.sh
 
 EXPOSE 2000
